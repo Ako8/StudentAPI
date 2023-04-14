@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+	<div>
+		<div>
+			<h1>Student ID {{ stid['student_id'] }}</h1>
+			<form method="PUT">
+				<h3>Name:   <input type="text" value="{{ stid['name'] }}" ></h3>
+				<h3>Age:    <input type="text" value="{{ stid['age'] }}"></h3>
+				<h3>Email:  <input type="text" value="{{ stid['email'] }}"></h3>
+				<h3>Gender: <input type="text" value="{{ stid['gender'] }}"></h3>
+				<h3>Phone:  <input type="text" value="{{ stid['phone'] }}"></h3>
+			</form>		    
+	    </div>
+	    <div>
+	    	<h3><a href="/home/students/change">Change Student's Data</a></h3>
+	    	<h3><a href="/home/students">Go Back</a></h3>
+		</div>	
+	</div>
+{% endblock %}
